@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @restaurant.user_id %>
+</p>
+
+<% if policy(@restaurant).edit? %>
+  <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<% end %>
+<%= link_to 'Back', restaurants_path %>
